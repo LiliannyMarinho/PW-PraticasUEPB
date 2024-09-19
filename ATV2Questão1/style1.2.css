@@ -33,6 +33,25 @@ header nav a:hover {
     text-decoration: underline;
 }
 
+header nav ul li {
+    display: inline-block;
+}
+
+.logo {
+    text-align: left;
+}
+.menu {
+    padding: 10px 20px;
+    transition: box-shadowm 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    background-color: rgb(69, 206, 142);
+}
+
 main {
     display: flex;
     padding: 20px;
