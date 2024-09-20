@@ -61,3 +61,21 @@ header {
     font-size: 13px;
     cursor: pointer;
 }
+
+button {
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: solid 1px rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    width: 150px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
