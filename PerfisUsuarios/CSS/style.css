@@ -2,45 +2,100 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #007BFF;
+    background-color: #007BFF; /* Fundo azul */
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
+    justify-content: flex-start; /* Alinha o container à esquerda */
+    align-items: flex-start; /* Alinha o conteúdo no topo da página */
 }
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Coloca os perfis um abaixo do outro */
     padding: 20px;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Garante que os itens comecem no topo */
+    align-items: flex-start; /* Alinha os cards à esquerda */
+    width: 100%;
 }
 
 .user-card {
-    background-color: white;
+    background-color: white; /* Fundo branco do card */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 1220px; /* Largura do card */
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .user-card:not(:last-child) {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #ccc; /* Linha separadora */
 }
 
+/* Estilos para a imagem do perfil */
 .user-card img {
-    border-radius: 50%;
+    height: auto;
+    border-radius: 50%; /* Imagem circular */
     margin-bottom: 15px;
 }
 
+/* Nome do usuário */
 .user-card h2 {
     font-size: 18px;
     color: #333;
     margin: 10px 0;
+    word-wrap: break-word;
 }
 
+/* Descrição do perfil */
 .user-card p {
     font-size: 14px;
     color: #666;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+
+    .user-card {
+        width: 350px;
+        padding: 15px;
+    }
+
+    .user-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user-card h2 {
+        font-size: 16px;
+    }
+
+    .user-card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin-left: 10px;
+        padding: 10px;
+    }
+
+    .user-card {
+        width: 350px; 
+        padding: 10px;
+    }
+
+    .user-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .user-card h2 {
+        font-size: 14px; 
+    }
+
+    .user-card p {
+        font-size: 12px;
+    }
 }
