@@ -1,7 +1,7 @@
 document.getElementById('search').addEventListener('click', () => {
     const cep = document.getElementById('cep').value.trim();
 
-    // Validação do CEP (8 dígitos)
+    // Validar CEP 
     if (cep.length !== 8 || isNaN(cep)) {
         alert('Por favor, insira um CEP válido com 8 dígitos.');
         return;
@@ -29,7 +29,7 @@ document.getElementById('search').addEventListener('click', () => {
         });
 });
 
-// Função para exibir os resultados
+// Exibir os resultados
 const displayResult = (data) => {
     document.getElementById('logradouro').textContent = `Logradouro: ${data.logradouro}`;
     document.getElementById('bairro').textContent = `Bairro: ${data.bairro}`;
@@ -37,7 +37,7 @@ const displayResult = (data) => {
     document.getElementById('uf').textContent = `Estado: ${data.uf}`;
 };
 
-// Função para limpar os resultados
+// Limpar os resultados
 const clearResult = () => {
     document.getElementById('logradouro').textContent = '';
     document.getElementById('bairro').textContent = '';
