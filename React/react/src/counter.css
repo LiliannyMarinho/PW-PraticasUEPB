@@ -1,0 +1,29 @@
+.container {
+    
+}
+
+.counter-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.counter-value {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.stop-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.stop-button:hover {
+    background-color: #0056b3;
+}
