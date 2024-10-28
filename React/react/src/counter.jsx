@@ -6,31 +6,42 @@ const Counter = () => {
   const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
-    let interval = null;
-
+    let interval;
     if (isRunning) {
       interval = setInterval(() => {
         setCount((prevCount) => prevCount + 1);
       }, 1000);
-    } else {
-      clearInterval(interval);
     }
-
     return () => clearInterval(interval);
   }, [isRunning]);
+
+  const startCounter = () => {
+    setIsRunning(true);
+  };
 
   const stopCounter = () => {
     setIsRunning(false);
   };
 
+  const resetCounter = () => {
+    setCount(0);
+    setIsRunning(false);
+  };
+
   return (
-    <div className='container'>
-        <div className="counter-container">
-            <h1 className="counter-value">Contador: {count}</h1>
-            <button onClick={stopCounter} className="stop-button">
-            Parar Contador
-            </button>
-        </div>
+    <div className="container">
+      <div className='container-cont'>
+      <h1 className='counter-value'>Contador: {count}</h1>
+      <button className='start' onClick={startCounter} disabled={isRunning}>
+        Iniciar Contador
+      </button>
+      <button className='stop' onClick={stopCounter} disabled={!isRunning}>
+        Parar Contador
+      </button>
+      <button className='restart' onClick={resetCounter}>
+        Reiniciar Contador
+      </button>
+      </div>
     </div>
   );
 };

@@ -1,19 +1,58 @@
-.container {
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.counter-container {
-    text-align: center;
-    margin-top: 20px;
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(15, 13, 53);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container-cont {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .counter-value {
+    text-align: center;
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: #ffffff;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0)
 }
 
-.stop-button {
+.container .container-cont button {
+    margin-left: 15px;
+}
+
+.container .container-cont .start {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #12ad34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container .container-cont .start:hover {
+    background-color: #0d7223;
+}
+
+.container .container-cont .stop {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -24,6 +63,21 @@
     transition: background-color 0.3s;
 }
 
-.stop-button:hover {
+.container .container-cont .stop:hover {
     background-color: #0056b3;
+}
+
+.container .container-cont .restart {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #cf4014;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container .container-cont .restart:hover {
+    background-color: #8f2c0e;
 }
